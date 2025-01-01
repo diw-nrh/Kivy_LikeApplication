@@ -5,9 +5,17 @@ BoxLayoutExample:
     orientation: "vertical"
     Button:
         text: "A"
+        size_hint: .5, None
+        # size: "48dp", "48dp"
+        #width: "100dp"
+        height: "68dp"
+        # x , y
+        pos_hint: {"x": .1}
+
     Button:
         text: "B"
-    Button:
+        size_hint: 1, 1
+    Label:
         text: "C"
 
 <MainWidget>:
