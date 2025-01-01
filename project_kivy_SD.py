@@ -8,8 +8,10 @@ class BoxLayoutExample(BoxLayout):
         super().__init__(**kwargs)
         b1 = Button(text='A')
         b2 = Button(text='B')
+        b3 = Button(text='C')
         self.add_widget(b1)
         self.add_widget(b2)
+        self.add_widget(b3)
 
 class MainWidget(Widget): 
     pass
