@@ -2,19 +2,30 @@
 BoxLayoutExample:
 
 <BoxLayoutExample>:
-    orientation: "vertical"
+    orientation: "horizontal"
     Button:
         text: "A"
-        size_hint: .5, None
+        size_hint: .5, .5
         # size: "48dp", "48dp"
-        #width: "100dp"
-        height: "68dp"
+        # width: "100dp"
+        # height: "68dp"
         # x , y
-        pos_hint: {"right": .75}
+        pos_hint: {"top": .75}
 
-    Button:
-        text: "B"
-        size_hint: 1, 1
+    BoxLayout:
+        orientation: "vertical"
+        spacing: "10dp"
+        Button:
+            text: "B1"
+        Button:
+            text: "B2"
+        Button:
+            text: "B3"
+        Button:
+            text: "B4"
+        Button:
+            text: "B5"
+
     Label:
         text: "C"
 
