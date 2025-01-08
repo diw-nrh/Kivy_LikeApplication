@@ -19,7 +19,7 @@ class GameWidget(Widget):
 
         # วาดตัวละคร
         with self.canvas:
-            self.hero = Rectangle(source='hero.png', pos=(0, 0), size=(100, 100))
+            self.hero = Rectangle(source='D:\code_vs_stady\PYTHON_TEST_STUDY\Application_study\LAP_KIVY\LAP_kv_4\download.jpg', pos=(0, 0), size=(100, 100))
 
     def _on_keyboard_closed(self):
         self._keyboard.unbind(on_key_down=self._on_key_down)
