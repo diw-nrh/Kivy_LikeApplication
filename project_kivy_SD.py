@@ -8,8 +8,8 @@ from kivy.uix.gridlayout import GridLayout
 # class GridLayouExample(GridLayout):
 #     pass
 
-class AnchorLayouExample(AnchorLayout):
-    pass
+# class AnchorLayouExample(AnchorLayout):
+#     pass
 
 class BoxLayoutExample(BoxLayout):
     pass
