@@ -6,7 +6,7 @@ from kivy.uix.anchorlayout import AnchorLayout
 
 
 class AnchorLayouExample(AnchorLayout):
-    
+    pass
 
 class BoxLayoutExample(BoxLayout):
     pass
