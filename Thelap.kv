@@ -4,12 +4,13 @@ AnchorLayouExample:
 <AnchorLayouExample>:
     anchor_x: "center"
     anchor_y: "top"
-    Button:
-        text: "A"
-        size_hint: .1,.1
-    # Button:
-    #     text: "B"
-    #     size_hint: .2,.2
+    BoxLayout:
+        size_hint: .2,.2
+        Button:
+            text: "A"
+        Button:
+            text: "B"
+
 
 <BoxLayoutExample>:
     orientation: "horizontal"
