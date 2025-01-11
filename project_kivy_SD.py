@@ -11,7 +11,7 @@ from kivy.uix.gridlayout import GridLayout
 # class AnchorLayouExample(AnchorLayout):
 #     pass
 
-class BoxLayoutExample(BoxLayout):
+class StackyoutExample(StackLayout):
     pass
     # def __init__(self, **kwargs):
     #     super().__init__(**kwargs)
