@@ -1,17 +1,11 @@
 #:kivy 2.0.0
 StackLayoutExample:
 
-<StackLayoutExample>:
-    ScrollView:
-        do_scroll_x: False  # ปิดการเลื่อนในแนวนอน
-        do_scroll_y: True   # เปิดการเลื่อนในแนวตั้ง
-        StackLayout:
-            size_hint_y: None
-            height: self.minimum_height
-            orientation: 'lr-bt'  # การจัดวางปุ่มในแนวขวางและจากล่างขึ้นบน
-            spacing: 10  # การเว้นระยะระหว่างปุ่ม
-            padding: [10, 10]  # การเว้นขอบของ StackLayout
 
+<ScrollViewExample@ScrollView>:
+    StackLayoutExample:
+        size_hint_y: 1,None
+        height: self.minimum_height
 
 
 <StackLayoutExample>:
