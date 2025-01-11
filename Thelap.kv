@@ -1,7 +1,17 @@
 #:kivy 2.0.0
 StackLayoutExample:
 
+<StackLayoutExample@ScrollView>:
+    StackLayout:
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'lr-tb'
+        padding: dp(10)
+        spacing: dp(5)
+
+
 <StackLayoutExample>:
+
     # left-right top-buttom
     # orientation: "lr-bt"
     # padding: ("28dp", "48dp", "28dp", "24dp")
