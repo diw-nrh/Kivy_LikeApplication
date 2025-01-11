@@ -10,8 +10,8 @@ from kivy.metrics import dp
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.orientation = "lr-bt"
-        for i in range(0, 10):
+        # self.orientation = "lr-bt"
+        for i in range(0, 100):
             size = dp(100)
             b = Button(
                 text=str(i + 1),
