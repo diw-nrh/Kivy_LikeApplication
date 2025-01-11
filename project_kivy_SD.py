@@ -6,14 +6,15 @@ from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.stacklayout import StackLayout
 
+class StackLayoutExample(StackLayout):
+    pass
+
 # class GridLayouExample(GridLayout):
 #     pass
 
 # class AnchorLayouExample(AnchorLayout):
 #     pass
 
-class StackLayoutExample(StackLayout):
-    pass
     # def __init__(self, **kwargs):
     #     super().__init__(**kwargs)
     #     self.orientation = 'vertical'
