@@ -15,6 +15,8 @@ class StackLayoutExample(StackLayout):
 # class AnchorLayouExample(AnchorLayout):
 #     pass
 
+class BoxLayoutExample(BoxLayout):
+    pass
     # def __init__(self, **kwargs):
     #     super().__init__(**kwargs)
     #     self.orientation = 'vertical'
