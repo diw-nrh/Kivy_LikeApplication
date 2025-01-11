@@ -12,7 +12,7 @@ from kivy.uix.stacklayout import StackLayout
 # class AnchorLayouExample(AnchorLayout):
 #     pass
 
-class StackLoutExample(StackLayout):
+class StackLayoutExample(StackLayout):
     pass
     # def __init__(self, **kwargs):
     #     super().__init__(**kwargs)
