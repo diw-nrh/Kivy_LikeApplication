@@ -5,12 +5,17 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.anchorlayout import AnchorLayout  
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.stacklayout import StackLayout
+from kivy.metrics import dp
 
 class StackLayoutExample(StackLayout):
-    def __init__(self, **kwarge):
-        super().__init__(**kwarge)
-        for i in range(0,10):
-            b = Button(text=str(i+1),size_hint=(.2, .2))
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        # สร้างปุ่ม 10 ปุ่ม
+        for i in range(0, 10):
+            b = Button(
+                text=str(i + 1),
+                size_hint=(None, None),
+                size=(dp(100), dp(100)))
             self.add_widget(b)
 
 # class GridLayouExample(GridLayout):
@@ -35,7 +40,8 @@ class MainWidget(Widget):
     pass
 
 class ThelapApp(App):
-    pass
+    def build(self):
+        return StackLayoutExample()
 
 if __name__ == '__main__':
     ThelapApp().run()
