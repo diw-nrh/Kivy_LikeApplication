@@ -9,8 +9,9 @@ from kivy.uix.stacklayout import StackLayout
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwarge):
         super().__init__(**kwarge)
-        b = Button(text="Z",size_hint=(.2, .2))
-        self.add_widget(b)
+        for i in range(0,10):
+            b = Button(text=str(i+1),size_hint=(.2, .2))
+            self.add_widget(b)
 
 # class GridLayouExample(GridLayout):
 #     pass
