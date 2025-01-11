@@ -7,7 +7,10 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.stacklayout import StackLayout
 
 class StackLayoutExample(StackLayout):
-    pass
+    def __init__(self, **kwarge):
+        super().__init__(**kwarge)
+        b = Button(text="Z")
+        self.add_widget(b)
 
 # class GridLayouExample(GridLayout):
 #     pass
