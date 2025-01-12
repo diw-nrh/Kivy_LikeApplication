@@ -12,7 +12,7 @@ class WidgetsExample(GridLayout):
         self.my_test = str(self.count)
 
     def on_toggle_button_state(self):
-        pass
+        print("toggle state")
 
 class ThelapApp(App):
     def build(self):
