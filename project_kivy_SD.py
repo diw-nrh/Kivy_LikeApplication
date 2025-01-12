@@ -5,7 +5,7 @@ from kivy.properties import StringProperty
 class WidgetsExample(GridLayout):
     count = 1
     coont_enabled = False
-    my_test = StringProperty("Hello")
+    my_test = StringProperty("1")
 
     def on_button_click(self):
         print("Button clicked")
