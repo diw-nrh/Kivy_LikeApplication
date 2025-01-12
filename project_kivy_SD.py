@@ -9,6 +9,8 @@ from kivy.metrics import dp
 
 class WidgetsExample(GridLayout):
     my_test = StringProperty("Hello")
+    def on_button_click(self):
+        print("Button clicked")
 
 # class GridLayouExample(GridLayout):
 #     pass
