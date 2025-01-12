@@ -1,12 +1,15 @@
 #:kivy 2.0.0
 WidgetsExample:
 
-<WidgetsExample@Gridlayout>:
-    cols: 3
+<WidgetsExample@GridLayout>:
+    cols: 2
     Button:
         text: "Click here"
+        on_press: root.on_button_click()
     Label:
-        text: "Hello"
+        text: root.my_test
+
+
 
 <ScrollViewExample@ScrollView>:
     StackLayoutExample:
