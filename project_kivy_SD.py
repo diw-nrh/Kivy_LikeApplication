@@ -8,7 +8,7 @@ class WidgetsExample(GridLayout):
 
     def on_button_click(self):
         print("Button clicked")
-        self.my_test = self.count
+        self.my_test = str(self.count)
         self.count += 1
 
 class ThelapApp(App):
