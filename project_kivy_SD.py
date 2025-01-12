@@ -1,10 +1,10 @@
 from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
-from kivy.properties import StringProperty
+from kivy.properties import StringProperty, BooleanProperty
 
 class WidgetsExample(GridLayout):
     count = 1
-    coont_enabled = False
+    coont_enabled = BooleanProperty(False)
     my_test = StringProperty("1")
 
     def on_button_click(self):
