@@ -4,12 +4,12 @@ from kivy.properties import StringProperty, BooleanProperty
 
 class WidgetsExample(GridLayout):
     count = 1
-    coont_enabled = BooleanProperty(False)
+    count_enabled = BooleanProperty(False)
     my_test = StringProperty("1")
 
     def on_button_click(self):
         print("Button clicked")
-        if self.coont_enabled :
+        if self.count_enabled :
             self.count += 1
             self.my_test = str(self.count)
 
@@ -17,10 +17,10 @@ class WidgetsExample(GridLayout):
         print("toggle state : " + widget.state)
         if widget.state == "normal":
             widget.text = "OFF"
-            self.coont_enabled = False
+            self.count_enabled = False
         else:
             widget.text = "ON"
-            self.coont_enabled = True
+            self.count_enabled = True
 
 class ThelapApp(App):
     def build(self):
