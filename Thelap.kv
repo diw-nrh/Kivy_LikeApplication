@@ -8,7 +8,7 @@ WidgetsExample:
         on_state: root.on_toggle_button_state()
     Button:
         text: "Count"
-        on_press: root.on_button_click()
+        on_press: root.on_button_click(self)
     Label:
         text: root.my_test
         color: 1, .5, 1, 1
