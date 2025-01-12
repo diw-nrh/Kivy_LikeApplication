@@ -11,6 +11,9 @@ class WidgetsExample(GridLayout):
         self.count += 1
         self.my_test = str(self.count)
 
+    def on_toggle_button_state(self):
+        pass
+
 class ThelapApp(App):
     def build(self):
         return WidgetsExample()
