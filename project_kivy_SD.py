@@ -3,11 +3,13 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.properties import StringProperty
 
 class WidgetsExample(GridLayout):
+    count = 1
     my_test = StringProperty("Hello")
 
     def on_button_click(self):
         print("Button clicked")
-        self.my_test = "You Clicked"
+        self.my_test = self.count
+        self.count += 1
 
 class ThelapApp(App):
     def build(self):
