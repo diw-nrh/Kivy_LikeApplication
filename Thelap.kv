@@ -4,8 +4,10 @@ WidgetsExample:
 <WidgetsExample@GridLayout>:
     cols: 3
     ToggleButton:
-        text: "toggle"
+        text: "OFF"
         on_state: root.on_toggle_button_state(self)
+        size_hint: None, 1
+        width: "100dp"
     Button:
         text: "Count"
         on_press: root.on_button_click()
