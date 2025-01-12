@@ -13,3 +13,90 @@ WidgetsExample:
         text: root.my_test
         color: 1, .5, 1, 1
         forn_size: "88dp"
+
+
+<ScrollViewExample@ScrollView>:
+    StackLayoutExample:
+        size_hint_y: 1,None
+        height: self.minimum_height
+
+
+<StackLayoutExample>:
+
+    # left-right top-buttom
+    # orientation: "lr-bt"
+    # padding: ("28dp", "48dp", "28dp", "24dp")
+    # spacing: "20pd", "28pd"
+<GridLayouExample@GridLayout>:
+    # rows
+    # cols
+    cols : 3
+    rows : 2
+    Button:
+        text: "A"
+        size_hint: None, 1
+        width: "60dp"
+    BoxLayoutExample:
+    Button:
+        text: "B"
+    Button:
+        text: "C"
+    Button:
+        text: "D"
+        size_hint: None, 1
+        width: "60dp"
+    Button:
+        text: "E"
+    Button:
+        text: "F"  
+
+<AnchorLayouExample>:
+    anchor_x: "center"
+    anchor_y: "top"
+    BoxLayout:
+        size_hint: .2,.2
+        Button:
+            text: "A"
+        Button:
+            text: "B"
+
+
+<BoxLayoutExample>:
+    orientation: "horizontal"
+    Button:
+        text: "A"
+        size_hint: .5, .5
+        # size: "48dp", "48dp"
+        # width: "100dp"
+        # height: "68dp"
+        # x , y
+        pos_hint: {"top": .75}
+
+    BoxLayout:
+        orientation: "vertical"
+        spacing: "10dp"
+        Button:
+            text: "B1"
+        Button:
+            text: "B2"
+        Button:
+            text: "B3"
+        Button:
+            text: "B4"
+        Button:
+            text: "B5"
+
+    Label:
+        text: "C"
+
+<MainWidget>:
+    Button:
+        text: "Hello World"
+        size: "100dp", "88dp"
+        pos: "100dp", "200dp"
+        color: 0, 0, 1, 1
+    Label:
+        text: "Hello World2"
+        size: "100dp", "88dp"
+        pos: "200dp", "300dp"
+        color: 1, 0, 0, 1
