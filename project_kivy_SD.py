@@ -4,19 +4,23 @@ from kivy.properties import StringProperty
 
 class WidgetsExample(GridLayout):
     count = 1
+    coont_enabled = False
     my_test = StringProperty("Hello")
 
     def on_button_click(self):
         print("Button clicked")
-        self.count += 1
-        self.my_test = str(self.count)
+        if self.coont_enabled :
+            self.count += 1
+            self.my_test = str(self.count)
 
     def on_toggle_button_state(self, widget):
         print("toggle state : " + widget.state)
         if widget.state == "normal":
             widget.text = "OFF"
+            self.coont_enabled = False
         else:
             widget.text = "ON"
+            self.coont_enabled = True
 
 class ThelapApp(App):
     def build(self):
