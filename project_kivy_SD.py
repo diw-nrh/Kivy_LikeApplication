@@ -25,6 +25,8 @@ class WidgetsExample(GridLayout):
     def on_switch_active(self, witget):
         print("Swith: " + str(witget.active))
 
+    def on_slider_value(self, witget):
+
 class ThelapApp(App):
     def build(self):
         return WidgetsExample()
