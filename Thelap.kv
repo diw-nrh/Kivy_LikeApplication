@@ -22,7 +22,7 @@ WidgetsExample:
 
 <ScrollViewExample@ScrollView>:
     StackLayoutExample:
-        on_active:
+        on_active: root.on_toggle_button_state(self)
         size_hint_y: 1,None
         height: self.minimum_height
 
