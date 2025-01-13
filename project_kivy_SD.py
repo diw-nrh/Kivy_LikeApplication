@@ -23,6 +23,7 @@ class WidgetsExample(GridLayout):
             self.count_enabled = True
 
     def on_switch_active(self, witget):
+        print("Swith: " + witget.active)
 
 class ThelapApp(App):
     def build(self):
