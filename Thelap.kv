@@ -20,14 +20,14 @@ WidgetsExample:
         on_active: root.on_switch_active(self)
         size_hint: None, 1
         width: "100dp"
+    Slider:
+        min: 0
+        max: 100
 
 <ScrollViewExample@ScrollView>:
     StackLayoutExample:
         size_hint_y: 1,None
         height: self.minimum_height
-    Slider:
-        min: 0
-        max: 100
 
 <StackLayoutExample>:
 
