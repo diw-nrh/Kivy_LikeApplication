@@ -7,6 +7,7 @@ class WidgetsExample(GridLayout):
     count_enabled = BooleanProperty(False)
     my_test = StringProperty("1")
     # slider_value_txt
+    slider_value_txt = StringProperty("Value")
 
     def on_button_click(self):
         print("Button clicked")
