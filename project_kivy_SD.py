@@ -26,7 +26,7 @@ class WidgetsExample(GridLayout):
         print("Swith: " + str(witget.active))
 
     def on_slider_value(self, witget):
-        print("Slider " + str(witget.value))
+        print("Slider " + str(int(witget.value)))
 
 class ThelapApp(App):
     def build(self):
