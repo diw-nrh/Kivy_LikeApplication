@@ -7,7 +7,7 @@ class WidgetsExample(GridLayout):
     count_enabled = BooleanProperty(False)
     my_test = StringProperty("1")
     # slider_value_txt
-    slider_value_txt = StringProperty("Value")
+    # slider_value_txt = StringProperty("Value")
 
     def on_button_click(self):
         print("Button clicked")
@@ -29,7 +29,7 @@ class WidgetsExample(GridLayout):
 
     def on_slider_value(self, witget):
         print("Slider " + str(int(witget.value)))
-        self.slider_value_txt = str(int(witget.value))
+        # self.slider_value_txt = str(int(witget.value))
 
 class ThelapApp(App):
     def build(self):
