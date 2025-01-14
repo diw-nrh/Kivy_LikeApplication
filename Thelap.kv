@@ -27,9 +27,9 @@ WidgetsExample:
         min: 0
         max: 100
         value: 50
-        # on_value: root.on_slider_value(self)
+        on_value: root.on_slider_value_change(self)
         orientation: "vertical"
-        disapled: not my_switch.active
+        disabled: not my_switch.active
     Label:
         text: str(int(my_slider.value))
 
