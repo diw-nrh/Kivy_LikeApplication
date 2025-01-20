@@ -13,5 +13,6 @@ class WhackAMoleApp(App):
         self.clock_event = None
         return self.root
 
+
 if __name__ == "__main__":
     WhackAMoleApp().run()
