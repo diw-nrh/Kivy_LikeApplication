@@ -1,7 +1,7 @@
 #:kivy 2.0.0
 
 GridLayout:
-    cols: 4
+    cols: 4  # 5 ปุ่มต่อแถว
     spacing: 10
     padding: 10
 
@@ -9,15 +9,15 @@ GridLayout:
         id: score_label
         text: "Score: 0"
         font_size: 24
-        size_hint: (1, 0.2)
+        size_hint: (1, 0.5)
         colspan: 5
 
     Button:
         id: start_button
         text: "Start Game"
         font_size: 20
-        size_hint: (1, 0.5)
-        background_color: [0, 1,0, 1]
+        size_hint: (1, 0.2)
+        background_color: [0,1,0, 1]
         pos_hint: {"center_x": 0.5, "center_y": 0.5}
 
     Button:
@@ -34,125 +34,184 @@ GridLayout:
         size_hint: (1, 0.5)
         background_color: [1, 1, 1, 1]
         
+    # สร้างปุ่มตัวตุ่น 30 ปุ่ม
     Button:
-        text: ""
-        font_size: 16
-        background_color: [1, 1, 1, 1]
-    Button:
-        text: ""
-        font_size: 16
-        background_color: [1, 1, 1, 1]
-    Button:
-        text: ""
-        font_size: 16
-        background_color: [1, 1, 1, 1]
-    Button:
-        text: ""
-        font_size: 16
-        background_color: [1, 1, 1, 1]
-    Button:
-        text: ""
-        font_size: 16
-        background_color: [1, 1, 1, 1]
-    Button:
-        text: ""
-        font_size: 16
-        background_color: [1, 1, 1, 1]
-    Button:
-        text: ""
-        font_size: 16
-        background_color: [1, 1, 1, 1]
-    Button:
-        text: ""
-        font_size: 16
-        background_color: [1, 1, 1, 1]
-    Button:
-        text: ""
-        font_size: 16
-        background_color: [1, 1, 1, 1]
-    Button:
+        id: mole_0
         text: ""
         font_size: 16
         opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_1
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_2
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_3
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_4
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_5
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_6
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_7
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_8
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_9
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_10
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_11
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_12
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_13
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_14
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_15
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_16
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_17
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_18
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
     Button:
+        id: mole_19
         text: ""
         font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
-
     Button:
+        id: mole_20
         text: ""
         font_size: 16
+        opacity: 0
+        background_color: [1, 1, 1, 1]
+    Button:
+        id: mole_21
+        text: ""
+        font_size: 16
+        opacity: 0
+        background_color: [1, 1, 1, 1]
+    Button:
+        id: mole_22
+        text: ""
+        font_size: 16
+        opacity: 0
+        background_color: [1, 1, 1, 1]
+    Button:
+        id: mole_23
+        text: ""
+        font_size: 16
+        opacity: 0
+        background_color: [1, 1, 1, 1]
+    Button:
+        id: mole_24
+        text: ""
+        font_size: 16
+        opacity: 0
+        background_color: [1, 1, 1, 1]
+    Button:
+        id: mole_25
+        text: ""
+        font_size: 16
+        opacity: 0
+        background_color: [1, 1, 1, 1]
+    Button:
+        id: mole_26
+        text: ""
+        font_size: 16
+        opacity: 0
+        background_color: [1, 1, 1, 1]
+    Button:
+        id: mole_27
+        text: ""
+        font_size: 16
+        opacity: 0
+        background_color: [1, 1, 1, 1]
+    Button:
+        id: mole_28
+        text: ""
+        font_size: 16
+        opacity: 0
+        background_color: [1, 1, 1, 1]
+    Button:
+        id: mole_29
+        text: ""
+        font_size: 16
+        opacity: 0
         background_color: [1, 1, 1, 1]
