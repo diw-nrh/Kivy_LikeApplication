@@ -9,8 +9,9 @@ class WhackAMoleApp(App):
         self.score = 0
         self.moles = []
         self.active_mole = None
-        self.mole_speed = 1.0
+        self.mole_speed = 1.2
         self.clock_event = None
+        self.boom_event = 0.3
         return self.root
 
     def on_start(self):
@@ -50,6 +51,83 @@ class WhackAMoleApp(App):
 
         for mole in self.moles:
             mole.bind(on_press=self.hit_mole)
+
+    def hit_mole(self, instance):
+        if instance == self.active_mole and instance.text != "!":
+            self.score += 1
+            self.root.ids.score_label.text = f"Score: {self.score}"
+            self.hide_mole(instance)
+            self.increase_speed()
+
+    def hit_bomb_mole(self, instance):
+        if instance == self.active_mole and instance.text == "!":
+            self.score -= 1
+            self.root.ids.score_label.text = f"Score: {self.score}"
+            self.hide_mole(instance)
+
+    def start_game(self):
+        self.root.ids.start_button.opacity = 0
+        self.root.ids.start_button.disabled = True
+        self.clock_event = Clock.schedule_interval(self.show_random_mole, self.mole_speed)
+
+    def increase_speed(self):
+        self.mole_speed = max(0.3, self.mole_speed - 0.01)
+        if self.clock_event:
+            self.clock_event.cancel()
+            self.clock_event = Clock.schedule_interval(self.show_random_mole, self.mole_speed)
+
+    def show_random_mole(self, dt):
+        if self.active_mole:
+            self.hide_mole(self.active_mole)
+
+        mole = random.choice(self.moles)
+        if random.random() < self.boom_event:
+            self.show_bomb_mole(mole)
+        else:
+            self.show_mole(mole)
+
+    def show_mole(self, mole):
+        mole.opacity = 1
+        mole.text = ""
+        mole.background_normal = "image_file/Mole.png"
+        mole.background_down = "image_file/Mole_pressed.png"
+        self.active_mole = mole
+        mole.unbind(on_press=self.hit_bomb_mole)
+        mole.bind(on_press=self.hit_mole)
+
+    def show_bomb_mole(self, mole):
+        mole.opacity = 1
+        mole.text = "!"
+        mole.background_normal = "image_file\cat_meme.png"  # แสดงภาพ Bomb
+        mole.background_down = "image_file\cat_meme.png"  # แสดงภาพเมื่อกด
+        self.active_mole = mole
+        mole.unbind(on_press=self.hit_mole)
+        mole.bind(on_press=self.hit_bomb_mole)
+
+    def hide_mole(self, mole):
+        mole.opacity = 0
+        mole.text = ""
+        mole.background_color = [1, 1, 1, 1]
+        self.active_mole = None
+        mole.unbind(on_press=self.hit_mole)
+        mole.unbind(on_press=self.hit_bomb_mole)
+
+    def reset_game(self):
+        self.score = 0 
+        self.mole_speed = 1.2
+        self.boom_event = 0.3
+        self.root.ids.score_label.text = f"Score: {self.score}"
+
+    def upbomb_button(self):
+        self.boom_event += 0.01
+
+    def downbomb_button(self):
+        self.boom_event -= 0.01    
+
+    def leave_game(self):
+        print("leave game")
+        App.get_running_app().stop()
+        exit()
 
 if __name__ == "__main__":
     WhackAMoleApp().run()
