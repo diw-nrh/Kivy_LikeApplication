@@ -98,8 +98,8 @@ class WhackAMoleApp(App):
     def show_bomb_mole(self, mole):
         mole.opacity = 1
         mole.text = "!"
-        mole.background_normal = "image_file\cat_meme.png"  # แสดงภาพ Bomb
-        mole.background_down = "image_file\cat_meme.png"  # แสดงภาพเมื่อกด
+        mole.background_normal = "image_file\BOMB.png"  # แสดงภาพ Bomb
+        mole.background_down = "image_file\BOMB.png"  # แสดงภาพเมื่อกด
         self.active_mole = mole
         mole.unbind(on_press=self.hit_mole)
         mole.bind(on_press=self.hit_bomb_mole)
@@ -117,7 +117,7 @@ class WhackAMoleApp(App):
         self.mole_speed = 1.2
         self.boom_event = 0.3
         self.root.ids.score_label.text = f"Score: {self.score}"
-
+        
     def upbomb_button(self):
         self.boom_event += 0.01
 

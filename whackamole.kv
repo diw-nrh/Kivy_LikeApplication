@@ -5,6 +5,12 @@ GridLayout:
     spacing: 10
     padding: 10
 
+    canvas.before:
+        Rectangle:
+            source: "image_file\grass.png"
+            pos: self.pos
+            size: self.size
+
     Label:
         id: score_label
         text: "Score: 0"
@@ -233,5 +239,3 @@ GridLayout:
         font_size: 16
         opacity: 0
         background_color: [1, 1, 1, 1]
-
-
