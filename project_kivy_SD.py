@@ -53,14 +53,14 @@ class WhackAMoleApp(App):
             mole.bind(on_press=self.hit_mole)
 
     def hit_mole(self, instance):
-        if instance == self.active_mole and instance.text != "!":
+        if instance == self.active_mole and instance.text != " ":
             self.score += 1
             self.root.ids.score_label.text = f"Score: {self.score}"
             self.hide_mole(instance)
             self.increase_speed()
 
     def hit_bomb_mole(self, instance):
-        if instance == self.active_mole and instance.text == "!":
+        if instance == self.active_mole and instance.text == " ":
             self.score -= 1
             self.root.ids.score_label.text = f"Score: {self.score}"
             self.hide_mole(instance)
@@ -97,9 +97,9 @@ class WhackAMoleApp(App):
 
     def show_bomb_mole(self, mole):
         mole.opacity = 1
-        mole.text = "!"
-        mole.background_normal = "image_file\BOMB.png"  # แสดงภาพ Bomb
-        mole.background_down = "image_file\BOMB.png"  # แสดงภาพเมื่อกด
+        mole.text = " "
+        mole.background_normal = "image_file\BOMB.png"
+        mole.background_down = "image_file\BOMB.png"
         self.active_mole = mole
         mole.unbind(on_press=self.hit_mole)
         mole.bind(on_press=self.hit_bomb_mole)
@@ -113,10 +113,13 @@ class WhackAMoleApp(App):
         mole.unbind(on_press=self.hit_bomb_mole)
 
     def reset_game(self):
-        self.score = 0 
-        self.mole_speed = 1.2
+        self.score = 0
         self.boom_event = 0.3
         self.root.ids.score_label.text = f"Score: {self.score}"
+        self.mole_speed = max(1.2,1.2)
+        if self.clock_event:
+            self.clock_event.cancel()
+            self.clock_event = Clock.schedule_interval(self.show_random_mole, self.mole_speed)
         
     def upbomb_button(self):
         self.boom_event += 0.01
